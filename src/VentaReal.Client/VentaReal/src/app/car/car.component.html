@@ -1,0 +1,18 @@
+<p matDialogTitle> {{ car.Id <= 0 ? "Registrar Nueva Entrada" : "Editar Registro"  }}  </p>
+
+    <label mat-dialog-title>Name </label>
+    <input [(ngModel)]="car.Name" id="Name" >
+
+    <label mat-dialog-title>Brand </label>
+    <input [(ngModel)]="car.Brand" id="Brand">
+
+<br/>
+<br/>
+
+<button mat-flat-button color="primary" (click)="car.Id <= 0 ? addCar() : updateCar()" >  
+    
+    {{ car.Id <= 0 ? "Registrar" : "Editar" }} 
+
+</button>
+
+<button mat-flat-button color="warn" (click)="closeComponent()">CANCEL</button>

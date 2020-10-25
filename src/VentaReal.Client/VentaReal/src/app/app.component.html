@@ -1,0 +1,16 @@
+
+<mat-sidenav-container >
+
+    
+    <mat-drawer   #drawer mode="side">
+        <a routerLink="/home">Home</a>
+    </mat-drawer>    
+
+    <button (click)="drawer.toggle()" >Click</button>
+
+    <router-outlet></router-outlet>
+
+</mat-sidenav-container>
+
+
+
