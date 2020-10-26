@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0AnHmQrIYfystNKPepmn90dhgJim2ReG1yHywksqHOhgoYR9cejIWjG5FUUKpZzBddND9M+61WSkyM8KiJBXuA==",
+  "dgSpecHash": "oqV8+t5HR0WWBVCXh93aW7E3sRQmHpNLrDlbtBhKMAX0+G5zxRri4MB7KeB+F9rUBnTvIFhYn6ZcZmzVy2V8RQ==",
   "success": true,
-  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/VentaReal.API.csproj",
+  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/VentaReal.API.csproj",
   "expectedPackageFiles": [
     "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.9/microsoft.aspnetcore.authentication.jwtbearer.3.1.9.nupkg.sha512",
     "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/VentaReal.API.csproj": {}
+    "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/VentaReal.API.csproj": {}
   },
   "projects": {
-    "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/VentaReal.API.csproj": {
+    "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/VentaReal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/VentaReal.API.csproj",
+        "projectUniqueName": "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/VentaReal.API.csproj",
         "projectName": "VentaReal.API",
-        "projectPath": "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/VentaReal.API.csproj",
+        "projectPath": "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/VentaReal.API.csproj",
         "packagesPath": "/Users/pedromiguelruiznunez/.nuget/packages/",
-        "outputPath": "/Users/pedromiguelruiznunez/Projects/VentaReal/VentaReal.API/obj/",
+        "outputPath": "/Users/pedromiguelruiznunez/Projects/VentaReal/src/VentaReal.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
