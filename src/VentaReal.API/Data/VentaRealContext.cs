@@ -25,7 +25,7 @@ namespace VentaReal.API.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(_configuration.GetSection("ConnectionStrings").Value );
+            builder.UseSqlServer( _configuration.GetSection("ConnectionStrings").Value );
         }
     }
 }
