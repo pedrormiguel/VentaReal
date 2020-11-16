@@ -10,6 +10,7 @@ namespace VentaReal.API.Data
     public class VentaRealContext : DbContext
     {
         private IConfiguration _configuration ;
+        
         public VentaRealContext(DbContextOptions<VentaRealContext> options, IConfiguration configuration) :
         base(options) 
         {
