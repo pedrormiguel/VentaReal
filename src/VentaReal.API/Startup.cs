@@ -10,6 +10,8 @@ using VentaReal.API.Data.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using VentaReal.API.Service;
+using VentaReal.API.Common.tools;
 
 namespace VentaReal.API
 {
@@ -43,25 +45,38 @@ namespace VentaReal.API
 
             });
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                    .AddJwtBearer( opt => {
+            var appSettingSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>( appSettingSection );
 
-                        opt.TokenValidationParameters = new TokenValidationParameters 
-                        {
-                            ValidateIssuer              = true,
-                            ValidateAudience            = true,
-                            ValidateLifetime            = true,
-                            ValidateIssuerSigningKey    = true,
-                            ValidIssuer                 = Configuration["AppSettings:Issuer"],
-                            ValidAudience               = Configuration["AppSettings:Issuer"],
-                            IssuerSigningKey            = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("AppSettings:Secret"))
-                        };
+            //JWT
+            var appSettings = appSettingSection.Get<AppSettings>();
+            var llave = Encoding.ASCII.GetBytes(appSettings.Secret);
 
-                    } );
+            services.AddAuthentication( JwtToken => 
+            
+                {
+                    JwtToken.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                     JwtToken.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+                }
+            ).AddJwtBearer( JwtBearer => 
+            {
+                JwtBearer.RequireHttpsMetadata = false;
+                JwtBearer.SaveToken = true;
+                JwtBearer.TokenValidationParameters = new TokenValidationParameters {
+
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey =  new SymmetricSecurityKey(llave),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
 
             services.AddMvc(opt => opt.EnableEndpointRouting = false);
             services.AddDbContext<VentaRealContext>();
             services.AddTransient<ICarServices, Carservices>();
+            services.AddScoped<IUserService,UserService>();
             
         }
 
