@@ -1,0 +1,11 @@
+mat-card {
+
+    border: 2px solid red;
+    width: 250px;
+    height: 200px;
+    border-radius: 25%;
+    text-align: center;
+    padding: 25px;
+    margin: 0px auto;
+
+}
