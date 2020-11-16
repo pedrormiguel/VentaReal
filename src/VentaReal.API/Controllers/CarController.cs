@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VentaReal.API.Data.Services;
 using VentaReal.API.Entities;
@@ -13,6 +14,7 @@ namespace VentaReal.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CarController : ControllerBase
     {
         private ICarServices _carservices;
@@ -109,4 +111,6 @@ namespace VentaReal.API.Controllers
         }
          
     }
+
+
 }
